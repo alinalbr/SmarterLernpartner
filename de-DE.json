@@ -1,0 +1,1260 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "smarter lernpartner",
+      "intents": [
+        {
+          "name": "RegisterExamIntent",
+          "slots": [
+            {
+              "name": "day",
+              "type": "AMAZON.Ordinal",
+              "samples": [
+                "der {day}",
+                "{day}",
+                "{month} {day}",
+                "{month} {day} {year}"
+              ]
+            },
+            {
+              "name": "month",
+              "type": "MonthType",
+              "samples": [
+                "{month}",
+                "im {month}",
+                "{month} {day}",
+                "{month} {day} {year}"
+              ]
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "samples": [
+                "Die Klausur ist im Jahr {year}",
+                "Jahr {year}",
+                "in {year}",
+                "in dem Jahr {year}",
+                "das Jahr {year}",
+                "{year}",
+                "{month} {day} {year}",
+                "{month} {year}"
+              ]
+            }
+          ],
+          "samples": [
+            "{day} {month} {year}",
+            "am {day} {month} {year}",
+            "{day}",
+            "{month}",
+            "{month} {year}",
+            "im Jahr {year}",
+            "Die Klausur ist am {day} {month} {year}",
+            "Klausur anmelden",
+            "Klausur eintragen",
+            "Erinner mich an meine Klausur"
+          ]
+        },
+        {
+          "name": "SayExamIntent",
+          "slots": [],
+          "samples": [
+            "Wann ist meine Klausur",
+            "Wann ist die Klausur",
+            "Wie viele Tage noch bis zur Klausur"
+          ]
+        },
+        {
+          "name": "StructLearningDayIntent",
+          "slots": [
+            {
+              "name": "subject",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{subject}"
+              ]
+            }
+          ],
+          "samples": [
+            "Plane meinen Lerntag",
+            "Lerntag planen",
+            "Anderes Fach lernen",
+            "Fach ändern",
+            "Lerntag konfigurieren",
+            "Strukturiere meinen Lerntag",
+            "ich will {subject} lernen",
+            "ich möchte heute {subject} lernen",
+            "ich will {subject} üben",
+            "auswendig lernen",
+            "üben",
+            "lernen",
+            "heute will ich {subject} lernen",
+            "ich möchte {subject} lernen"
+          ]
+        },
+        {
+          "name": "LearningTargetIntent",
+          "slots": [
+            {
+              "name": "learningTarget",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "Ich möchte {learningTarget} erreichen",
+                "Mein Lernziel ist {learningTarget}"
+              ]
+            }
+          ],
+          "samples": [
+            "Lernziel ändern",
+            "Lernziel definieren",
+            "Mein Lernziel ist {learningTarget}",
+            "Ich möchte {learningTarget} erreichen"
+          ]
+        },
+        {
+          "name": "FinishTimeIntent",
+          "slots": [
+            {
+              "name": "time",
+              "type": "AMAZON.TIME",
+              "samples": [
+                "{time}"
+              ]
+            }
+          ],
+          "samples": [
+            "Uhrzeit ändern",
+            "{time}",
+            "ich möchte bis um {time} lernen",
+            "bis um {time}"
+          ]
+        },
+        {
+          "name": "RewardIntent",
+          "slots": [
+            {
+              "name": "reward",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{reward}",
+                "Meine Belohnung lautet {reward}"
+              ]
+            }
+          ],
+          "samples": [
+            "Meine Belohnung für heute ist {reward}",
+            "Ich werde heute {reward} "
+          ]
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "was kannst du ",
+            "was kannst du alles"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "SayLearningTargetIntent",
+          "slots": [],
+          "samples": [
+            "wie lautet mein lernziel",
+            "was ist mein lernziel",
+            "lernziel"
+          ]
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": [
+            "ich weiß nicht",
+            "nein",
+            "keine Uhrzeit nötig",
+            "Ich will das nicht",
+            "das möchte ich nicht",
+            "ich möchte kein Lernziel",
+            "keine Uhrzeit angeben"
+          ]
+        },
+        {
+          "name": "RemindFinishTimeIntent",
+          "slots": [],
+          "samples": [
+            "Starte Lerntag",
+            "Wann bin ich fertig"
+          ]
+        },
+        {
+          "name": "BreakMoodIntent",
+          "slots": [
+            {
+              "name": "mood",
+              "type": "mood"
+            }
+          ],
+          "samples": [
+            "Meine Lernphase war {mood}",
+            "Lernen reflektieren",
+            "Reflektiere Lernphase",
+            "Meine Stimmung ist {mood}"
+          ]
+        },
+        {
+          "name": "FinishMoodIntent",
+          "slots": [
+            {
+              "name": "learningDayMood",
+              "type": "mood",
+              "samples": [
+                "{learningDayMood}"
+              ]
+            }
+          ],
+          "samples": [
+            "Mein Lerntag war {learningDayMood}"
+          ]
+        },
+        {
+          "name": "RemindThirtyMinBreakIntent",
+          "slots": [],
+          "samples": [
+            "Starte kurze Pause",
+            "Starte dreißig Minuten Pause"
+          ]
+        },
+        {
+          "name": "RemindSixtyMinIntent",
+          "slots": [],
+          "samples": [
+            "Starte lange Pause",
+            "Starte sechzig Minuten Pause"
+          ]
+        },
+        {
+          "name": "RemindLearningBreakIntent",
+          "slots": [],
+          "samples": [
+            "Erinner mich an Pausen",
+            "Starte Fortsetzung",
+            "Mache eine Pause"
+          ]
+        },
+        {
+          "name": "ProgressIntent",
+          "slots": [
+            {
+              "name": "progressInPercent",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{progressInPercent}"
+              ]
+            }
+          ],
+          "samples": [
+            "Speichere Lernfortschritt"
+          ]
+        },
+        {
+          "name": "SayProgressIntent",
+          "slots": [],
+          "samples": [
+            "Was ist mein Lernfortschritt",
+            "Sage meinen Lernfortschritt"
+          ]
+        },
+        {
+          "name": "FinishTodayIntent",
+          "slots": [],
+          "samples": [
+            "Beende meinen Lerntag",
+            "Mein Lerntag ist zu Ende"
+          ]
+        },
+        {
+          "name": "RemindExamIntent",
+          "slots": [],
+          "samples": [
+            "Klausurerinnerung",
+            "Erinnerung an Klausur",
+            "Erinner mich an die Klausur"
+          ]
+        },
+        {
+          "name": "RelaxIntent",
+          "slots": [],
+          "samples": [
+            "Starte Entspannungsübung",
+            "Starte Entspannung"
+          ]
+        },
+        {
+          "name": "MeditationIntent",
+          "slots": [],
+          "samples": [
+            "Starte Meditation"
+          ]
+        },
+        {
+          "name": "ActivationIntent",
+          "slots": [],
+          "samples": [
+            "Starte Aktivierungsübung"
+          ]
+        },
+        {
+          "name": "FoodIntent",
+          "slots": [],
+          "samples": [
+            "Rezeptidee",
+            "Gebe Rezeptidee"
+          ]
+        },
+        {
+          "name": "LearningTipsIntent",
+          "slots": [],
+          "samples": [
+            "Gebe Lerntipps"
+          ]
+        },
+        {
+          "name": "ConcentrationIntent",
+          "slots": [],
+          "samples": [
+            "Starte Konzentrationsübung"
+          ]
+        },
+        {
+          "name": "FindLearnTypeIntent",
+          "slots": [
+            {
+              "name": "audio_one",
+              "type": "AnswerType",
+              "samples": [
+                "{audio_one}"
+              ]
+            },
+            {
+              "name": "audio_two",
+              "type": "AnswerType",
+              "samples": [
+                "{audio_two}"
+              ]
+            },
+            {
+              "name": "audio_three",
+              "type": "AnswerType",
+              "samples": [
+                "{audio_three}"
+              ]
+            },
+            {
+              "name": "visual_one",
+              "type": "AnswerType",
+              "samples": [
+                "{visual_one}"
+              ]
+            },
+            {
+              "name": "visual_two",
+              "type": "AnswerType",
+              "samples": [
+                "{visual_two}"
+              ]
+            },
+            {
+              "name": "visual_three",
+              "type": "AnswerType",
+              "samples": [
+                "{visual_three}"
+              ]
+            },
+            {
+              "name": "motoric_one",
+              "type": "AnswerType",
+              "samples": [
+                "{motoric_one}"
+              ]
+            },
+            {
+              "name": "motoric_two",
+              "type": "AnswerType",
+              "samples": [
+                "{motoric_two}"
+              ]
+            },
+            {
+              "name": "motoric_three",
+              "type": "AnswerType",
+              "samples": [
+                "{motoric_three}"
+              ]
+            },
+            {
+              "name": "comm_one",
+              "type": "AnswerType",
+              "samples": [
+                "{comm_one}"
+              ]
+            },
+            {
+              "name": "comm_two",
+              "type": "AnswerType",
+              "samples": [
+                "{comm_two}"
+              ]
+            },
+            {
+              "name": "comm_three",
+              "type": "AnswerType",
+              "samples": [
+                "{comm_three}"
+              ]
+            }
+          ],
+          "samples": [
+            "{comm_one} {comm_two} {comm_three}",
+            "{motoric_one} {motoric_two} {motoric_three}",
+            "{visual_one} {visual_two} {visual_three}",
+            "{audio_three}",
+            "{audio_two}",
+            "{audio_one}"
+          ]
+        },
+        {
+          "name": "StartLearnTypeIntent",
+          "slots": [],
+          "samples": [
+            "Lerntyp herausfinden",
+            "Lerntyp ermitteln",
+            "Was ist mein Lerntyp",
+            "Starte Lerntyp herausfinden",
+            "Finde meinen Lerntyp heraus"
+          ]
+        },
+        {
+          "name": "BreakMoodGoodIntent",
+          "slots": [],
+          "samples": [
+            "ganz gut",
+            "meine lernphase lief gut",
+            "war okay",
+            "war ganz gut",
+            "lief gut"
+          ]
+        },
+        {
+          "name": "BreakMoodBadIntent",
+          "slots": [],
+          "samples": [
+            "keine konzentration",
+            "meine lernphase lief schlecht",
+            "war nicht gut",
+            "negativ",
+            "lief schlecht"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "id": "12",
+              "name": {
+                "value": "Dezember"
+              }
+            },
+            {
+              "id": "11",
+              "name": {
+                "value": "November"
+              }
+            },
+            {
+              "id": "10",
+              "name": {
+                "value": "Oktober"
+              }
+            },
+            {
+              "id": "09",
+              "name": {
+                "value": "September",
+                "synonyms": [
+                  "Sep"
+                ]
+              }
+            },
+            {
+              "id": "08",
+              "name": {
+                "value": "August"
+              }
+            },
+            {
+              "id": "07",
+              "name": {
+                "value": "Juli"
+              }
+            },
+            {
+              "id": "06",
+              "name": {
+                "value": "Juni"
+              }
+            },
+            {
+              "id": "05",
+              "name": {
+                "value": "Mai"
+              }
+            },
+            {
+              "id": "04",
+              "name": {
+                "value": "April"
+              }
+            },
+            {
+              "id": "03",
+              "name": {
+                "value": "März"
+              }
+            },
+            {
+              "id": "02",
+              "name": {
+                "value": "Februar"
+              }
+            },
+            {
+              "id": "01",
+              "name": {
+                "value": "Januar"
+              }
+            }
+          ],
+          "name": "MonthType"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "okay"
+              }
+            },
+            {
+              "name": {
+                "value": "schlecht"
+              }
+            },
+            {
+              "name": {
+                "value": "gut"
+              }
+            }
+          ],
+          "name": "mood"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Optimierung"
+              }
+            }
+          ],
+          "name": "SubjectType"
+        },
+        {
+          "values": [
+            {
+              "id": "0",
+              "name": {
+                "value": "trifft nicht zu"
+              }
+            },
+            {
+              "id": "5",
+              "name": {
+                "value": "trifft teilweise zu"
+              }
+            },
+            {
+              "id": "10",
+              "name": {
+                "value": "trifft zu"
+              }
+            }
+          ],
+          "name": "AnswerType"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "StructLearningDayIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "subject",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1091787295055.777244026057"
+              }
+            }
+          ]
+        },
+        {
+          "name": "LearningTargetIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "learningTarget",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1001273455261.1316196210949"
+              }
+            }
+          ]
+        },
+        {
+          "name": "FinishTimeIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "time",
+              "type": "AMAZON.TIME",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.797005989243.521726875420"
+              }
+            }
+          ]
+        },
+        {
+          "name": "RewardIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "reward",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.564692242521.870831376929"
+              }
+            }
+          ]
+        },
+        {
+          "name": "BreakMoodIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "mood",
+              "type": "mood",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1038972710443.975506568986"
+              }
+            }
+          ]
+        },
+        {
+          "name": "FinishMoodIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "learningDayMood",
+              "type": "mood",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.629777294620.382166516249"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ProgressIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "progressInPercent",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1173761160991.1384860829483"
+              }
+            }
+          ]
+        },
+        {
+          "name": "RegisterExamIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.746177723927"
+          },
+          "slots": [
+            {
+              "name": "day",
+              "type": "AMAZON.Ordinal",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.653974572406.1040382425372"
+              },
+              "validations": [
+                {
+                  "type": "isInSet",
+                  "prompt": "Slot.Validation.190694681136.1424851421300.1030431910159",
+                  "values": [
+                    "22",
+                    "23",
+                    "24",
+                    "25",
+                    "26",
+                    "27",
+                    "28",
+                    "29",
+                    "30",
+                    "31",
+                    "10",
+                    "11",
+                    "12",
+                    "13",
+                    "14",
+                    "15",
+                    "16",
+                    "17",
+                    "18",
+                    "19",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "20",
+                    "21"
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "month",
+              "type": "MonthType",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.282358190483.487594834711"
+              }
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1253554922892.1358447173887"
+              }
+            }
+          ]
+        },
+        {
+          "name": "FindLearnTypeIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.204303540010"
+          },
+          "slots": [
+            {
+              "name": "audio_one",
+              "type": "AnswerType",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1060186513654.1507655072796"
+              }
+            },
+            {
+              "name": "audio_two",
+              "type": "AnswerType",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1060186513654.1384516001016"
+              }
+            },
+            {
+              "name": "audio_three",
+              "type": "AnswerType",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1060186513654.157024732062"
+              }
+            },
+            {
+              "name": "visual_one",
+              "type": "AnswerType",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1060186513654.1490443110333"
+              }
+            },
+            {
+              "name": "visual_two",
+              "type": "AnswerType",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1060186513654.1159913932011"
+              }
+            },
+            {
+              "name": "visual_three",
+              "type": "AnswerType",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1060186513654.90024475490"
+              }
+            },
+            {
+              "name": "motoric_one",
+              "type": "AnswerType",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1060186513654.1178189431945"
+              }
+            },
+            {
+              "name": "motoric_two",
+              "type": "AnswerType",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1060186513654.87618418834"
+              }
+            },
+            {
+              "name": "motoric_three",
+              "type": "AnswerType",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1060186513654.1546411760342"
+              }
+            },
+            {
+              "name": "comm_one",
+              "type": "AnswerType",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1060186513654.1193147962719"
+              }
+            },
+            {
+              "name": "comm_two",
+              "type": "AnswerType",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1060186513654.1173952764162"
+              }
+            },
+            {
+              "name": "comm_three",
+              "type": "AnswerType",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1060186513654.1021045303599"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.653974572406.1040382425372",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "An welchem Tag schreibst du die Klausur?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.282358190483.487594834711",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "In welchem Monat findet die Klausur statt?"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.190694681136.1424851421300.1030431910159",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Bitte sage einen zulässigen Tag"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1253554922892.1358447173887",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "In welchem Jahr findet die Klausur statt?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.746177723927",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Das Klausur-Datum ist {day} ter {month}  {year} , habe ich das richtig verstanden?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.556115415325.557149889298",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What\u0027s the message for the reminder?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Great. Now please tell me what message you want in the reminder"
+          },
+          {
+            "type": "PlainText",
+            "value": "Ok. Now please say the message for the reminder"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.556115415325",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "The message. {message} .will be sent as a reminder on your birthday. Is it correct?"
+          },
+          {
+            "type": "PlainText",
+            "value": "On your birthday I will send you a reminder with this message. {message} . Ok?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.1091787295055",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Dein heutiges Fach lautet {subject} habe ich das richtig verstanden?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1091787295055.777244026057",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Welches Fach möchtest du heute lernen?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.1091787295055.777244026057",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Dein heutiges Fach lautet {subject} habe ich das richtig verstanden?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.1001273455261",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Dein Lernziel für heute lautet {learningTarget} ist das richtig?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1001273455261.1316196210949",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Was ist dein Lernziel für heute?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.797005989243",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Du möchtest bis um {time} lernen, habe ich das richtig verstanden?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.797005989243.521726875420",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Um wie viel Uhr möchtest du heute mit Lernen  aufhören?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.564692242521",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Deine Belohnung für heute lautet {reward} . Ist das korrekt?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.564692242521.870831376929",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Zum Schluss noch, wie lautet deine Belohnung für heute?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Slot.494598856151.688436860997",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Du möchtest also {subject} lernen NAAAA HAHAHAH SUPER"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1057142749502.929556699894",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Kannst du mir bitte sagen, wie deine vergangenen zwei Stunden für dich waren?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.1057142749502",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Deine letzte Lernphase war {mood} , habe ich das richtig verstanden?"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.629777294620",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Dein Lerntag war {learningDayMood} , habe ich das richtig verstanden?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.629777294620.382166516249",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Erzähle mir bitte, wie dein Lerntag war."
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.1173761160991",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Dein Lernfortschritt für heute ist {progressInPercent} Prozent, ist das korrekt?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1173761160991.1384860829483",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Wie viel Prozent vom benötigten Stoff kannst du nach deinem heutigen Lerntag?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1038972710443.975506568986",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Wie war deine letzte Lernphase?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1060186513654.1507655072796",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Zuhören, auch über längere Strecken, fällt Dir leicht."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1060186513654.1384516001016",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Du machst wenige Notizen bei Vorlesungen und konzentrierst Dich auf das Zuhören"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1060186513654.157024732062",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Beim Schreiben formulierst Du jeden Satz erst im Kopf aus."
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1060186513654.1490443110333",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Du verstehst schnell Grafiken, Schaubildern und Co. und sie helfen Dir mehr als Text"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1060186513654.1159913932011",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Deine Notizen sind gespickt mit Symbolen, Zeichnungen, Listen und Tabellen"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1060186513654.90024475490",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Lehrer und Dozenten, die sehr bildstarke Sprache verwenden und gestikulieren, sind Dir lieber"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1060186513654.1178189431945",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Du musst Dinge immer selbst ausprobieren oder anfassen, um sie besser zu verstehen"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1060186513654.87618418834",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Übungen und Rollenspiele helfen Dir, Dich an Informationen und Konzepte zu erinnern"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1060186513654.1546411760342",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Deine Hände sind selten still. Als Zuhörer zeichnest Du oder spielst mit Gegenständen"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1060186513654.1193147962719",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Diskussionen und Gespräche helfen Dir beim Lernen und helfen Dir Gelerntes später abzurufen"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1060186513654.1173952764162",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Du berichtest anderen gerne, was Du gelernt hast. Vorträge und Referate sind für Dich kein Problem"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1060186513654.1021045303599",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "In kleinen Seminaren fühlst Du Dich deshalb viel wohler als in der Vorlesung"
+          }
+        ]
+      },
+      {
+        "id": "Confirm.Intent.204303540010",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Super, du hast nun alle Fragen beantwortet, wenn du herausfinden möchtest, welcher Lerntyp du am ehesten bist, sage einfach ja."
+          }
+        ]
+      }
+    ]
+  },
+  "version": "57"
+}
